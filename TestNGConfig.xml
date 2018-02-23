@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestSuite" verbose="1" >
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="com.company.common.SuiteListener" ></listener>
+    </listeners>
+
+    <test name="SmokeTest"   >
+        <packages>
+            <package name="com.company.uitests" />
+        </packages>
+
+        <!-- Groups to run and exclude -->
+        <groups>
+            <run>
+                <include name="All"  />
+                <exclude name="broken"  />
+            </run>
+        </groups>
+
+        <!-- Parameters -->
+        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="url" value="http://flamenipper.33across.com/?__rtcreativeid=138224697000"></parameter>
+    </test>
+
+
+
+</suite>

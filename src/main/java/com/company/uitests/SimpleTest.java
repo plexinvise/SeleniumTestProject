@@ -31,6 +31,7 @@ public class SimpleTest extends BaseTest {
             Assert.assertTrue(waitForElementPresent(mainTestPage.getAdCloseBtn()), "AdClose button is not appeared");
             mainTestPage.getAdCloseBtn().click();
         }
+        Assert.assertTrue(waitForElementPresent(mainTestPage.getAd()), "Ad is not appeared");
     }
 
 

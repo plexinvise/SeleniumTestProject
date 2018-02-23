@@ -21,7 +21,7 @@
         </groups>
 
         <!-- Parameters -->
-        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="browser" value="firefox"></parameter>
         <parameter name="url" value="http://flamenipper.33across.com/?__rtcreativeid=138224697000"></parameter>
     </test>
 

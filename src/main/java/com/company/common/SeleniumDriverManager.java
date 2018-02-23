@@ -16,6 +16,7 @@ public class SeleniumDriverManager {
     }
 
     public WebDriver initChromeDriver () {
+
         // Setting ChromeDriver location
         System.setProperty("webdriver.chrome.driver", "chromedriver");
 
@@ -25,8 +26,9 @@ public class SeleniumDriverManager {
     }
 
     public WebDriver initFirefoxDriver () {
+
         // Setting GeckoDriver location
-        System.setProperty("webdriver.chrome.driver", "geckodriver");
+        System.setProperty("webdriver.gecko.driver", "geckodriver");
 
         WebDriver driver = new FirefoxDriver();
         driver.get(URL);

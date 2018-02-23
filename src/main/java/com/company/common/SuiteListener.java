@@ -17,6 +17,9 @@ public class SuiteListener implements ISuiteListener {
 
     @BeforeSuite(alwaysRun = true)
     public void onStart (ISuite suite) {
+
+        // Reading browser parameter from TestNgConfig to run for different browsers
+        // Helpful in setting automation runs through jenkins etc.
         String browser = suite.getXmlSuite().getAllParameters().get("browser");
         driverManager =
                 new SeleniumDriverManager(suite.getXmlSuite().getAllParameters().get("url"));
@@ -31,6 +34,8 @@ public class SuiteListener implements ISuiteListener {
 
     }
 
+
+    // Closing driver after suite completed
     @AfterSuite(alwaysRun = true)
     public void onFinish (ISuite suite) {
         if (driver!=null) {

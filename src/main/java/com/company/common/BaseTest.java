@@ -9,6 +9,8 @@ public class BaseTest {
 
     int pollingTime = 10;
 
+    // Also possible to implement WebElement interface and add method waitFor.
+    // It will extend the functionality of WebElement and make it more convenient in usage
     public boolean waitForElementPresent (WebElement element) {
         while (pollingTime>=0) {
         if (element.isDisplayed()) {

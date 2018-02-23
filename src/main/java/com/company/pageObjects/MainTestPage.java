@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
  */
 public class MainTestPage {
 
+    // PageObject to find elements through Selenium PageFactory
+
     @FindBy(how = How.CLASS_NAME, using = "tynt-ad-frame")
     WebElement ad;
 
